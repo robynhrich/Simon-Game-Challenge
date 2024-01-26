@@ -16,3 +16,5 @@ Check which button is pressed
 Add sounds to button clicks
 
 Add animations to user clicks
+
+Start The Game w/ jQuery

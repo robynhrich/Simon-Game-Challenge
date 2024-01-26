@@ -6,6 +6,9 @@ var userClickedPattern = [];
 $(".btn").click(function () {
   var userChosenColor = $(this).attr("id");
   userClickedPattern.push(userChosenColor);
+  playSound(userChosenColor);
+
+  animatePress(userChosenColor);
 });
 
 function nextSequence() {
@@ -15,16 +18,22 @@ function nextSequence() {
   var randomChosenColor = buttonColors[randomNumber];
 
   gamePattern.push(randomChosenColor);
+  $("#" + randomChosenColor)
+    .fadeOut(100)
+    .fadeIn(100)
+    .fadeOut(100)
+    .fadeIn(100);
 
   playSound(randomChosenColor);
 
   function playSound(name) {
-    $("#" + randomChosenColor)
-      .fadeOut(100)
-      .fadeIn(100)
-      .fadeOut(100)
-      .fadeIn(100);
     var audio = new Audio("sounds/" + name + ".mp3");
     audio.play();
   }
+}
+function animatePress(currentColor) {
+  $("#" + currentColor).addClass("pressed");
+  setTimeout(function () {
+    $("#" + currentColor).removeClass("pressed");
+  }, 100);
 }
