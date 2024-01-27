@@ -20,3 +20,5 @@ Add animations to user clicks
 Start The Game w/ jQuery
 
 Create a checkAnswer function against the game sequence
+
+Connect CSS Game Over
