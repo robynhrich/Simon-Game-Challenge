@@ -22,3 +22,5 @@ Start The Game w/ jQuery
 Create a checkAnswer function against the game sequence
 
 Connect CSS Game Over
+
+Restart the Game...create a function
